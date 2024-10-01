@@ -5,51 +5,51 @@
   background: $clr-light;
   .branding {
     @include flexBetween;
-    h4.details{
+    h4.details {
       display: none;
       i {
         color: $clr-primary;
         font-size: 2.5rem;
       }
     }
-    .toggle__menu{
+    .toggle__menu {
       background: $clr-primary;
-      padding:1rem;
+      padding: 1rem;
       border-radius: 1rem;
       span {
-          width: 2.5rem;
-          height: .3rem;
-          background-color: $clr-light;
-          display: block;
-          border-radius: 5rem;
-          &:nth-child(2) {
-            margin:.5rem 0;
-          }
+        width: 2.5rem;
+        height: 0.3rem;
+        background-color: $clr-light;
+        display: block;
+        border-radius: 5rem;
+        &:nth-child(2) {
+          margin: 0.5rem 0;
+        }
       }
     }
   }
-  &__details{
+  &__details {
     margin-top: 5rem;
-    h4  {
-      margin:1rem 0;
-        display: flex;
-        justify-content: center;
-        gap:2rem;
-        i {
-          color: $clr-primary;
-          font-size: 2.5rem;
-        }
+    h4 {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      i {
+        color: $clr-primary;
+        font-size: 2.5rem;
       }
+    }
   }
 
   &__actions {
-    margin-top:7rem;
+    margin-top: 7rem;
     display: flex;
     justify-content: space-between;
     ul.header__nav {
       background: #e3e2e2;
       position: absolute;
-      top:10rem;
+      top: 10rem;
       left: 0rem;
       width: 100%;
       max-height: 0rem;
@@ -58,45 +58,46 @@
       flex-direction: column;
       text-align: center;
       overflow: hidden;
-      transition: .5s ease;
-      gap:2rem;
-      &.open{
+      transition: 0.5s ease;
+      gap: 2rem;
+      &.open {
         max-height: 50rem;
         padding: 5rem;
-        transition: .5s ease;
+        transition: 0.5s ease;
       }
+
       li {
-        transition: .5s ease;
+        transition: 0.5s ease;
         position: relative;
-        a{
+        a {
           color: $clr-dark;
         }
-        &::after{
-          content: '';
+        &::after {
+          content: "";
           width: 4rem;
-          height: .2rem;
-          background-color:transparent;
-          display:block;
+          height: 0.2rem;
+          background-color: transparent;
+          display: block;
           position: absolute;
           right: 25rem;
-          top:50%;
-          transition: .5s ease;
+          top: 50%;
+          transition: 0.5s ease;
         }
-        &:hover{
+        &:hover {
           transform: translateX(-5rem);
-          transition: .5s ease;
-          &::after{
-            content: '';
+          transition: 0.5s ease;
+          &::after {
+            content: "";
             background-color: $clr-primary;
             right: 10rem;
-            transition: .5s ease;
+            transition: 0.5s ease;
           }
         }
       }
     }
     ul.header__social {
       display: flex;
-      gap:2rem;
+      gap: 2rem;
       font-size: 2rem;
       li {
         a {
@@ -106,7 +107,7 @@
     }
     ul.header__extra {
       display: flex;
-      gap:2rem;
+      gap: 2rem;
       font-size: 2rem;
       li {
         a {
@@ -115,52 +116,46 @@
       }
     }
   }
- 
 
-  @include mediaQuery($break-lg){
+  @include mediaQuery($break-lg) {
     .branding {
-      h4.details{
+      h4.details {
         // display: --overwriting
         display: flex;
-        gap:2rem;
+        gap: 2rem;
       }
       .toggle__menu {
-        display:none;
+        display: none;
       }
     }
-    &__details{
+    &__details {
       display: none;
     }
     &__actions {
       display: grid;
-      grid-template-columns: 3fr .8fr .8fr;
+      grid-template-columns: 3fr 0.8fr 0.8fr;
       justify-items: flex-end;
       ul.header__nav {
-        position:static;
+        position: static;
         max-height: fit-content;
         display: flex;
         flex-direction: row;
         background: $clr-light;
         width: unset;
         justify-items: flex-end;
-        li{
-          &:hover{
+        li {
+          &:hover {
             transform: translateX(0rem);
             a {
               color: $clr-primary;
             }
-            &::after{
-              content: '';
+            &::after {
+              content: "";
               display: none;
             }
           }
         }
       }
     }
-    
   }
-
-  }
-
-  
-  
+}
