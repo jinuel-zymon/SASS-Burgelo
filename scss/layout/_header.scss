@@ -1,0 +1,108 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.header {
+  background: $clr-light;
+  .branding {
+    @include flexBetween;
+    h4.details{
+      display: none;
+      i {
+        color: $clr-primary;
+        font-size: 2.5rem;
+      }
+    }
+    .toggle__menu{
+      background: $clr-primary;
+      padding:1rem;
+      border-radius: 1rem;
+      span {
+          width: 2.5rem;
+          height: .3rem;
+          background-color: $clr-light;
+          display: block;
+          border-radius: 5rem;
+          &:nth-child(2) {
+            margin:.5rem 0;
+          }
+      }
+    }
+  }
+  &__details{
+    h4  {
+      margin:1rem 0;
+        display: flex;
+        justify-content: center;
+        gap:2rem;
+        i {
+          color: $clr-primary;
+          font-size: 2.5rem;
+        }
+      }
+  }
+
+  &__actions {
+    margin:2rem 0;
+    display: flex;
+    justify-content: space-between;
+    ul.header__nav {
+      display: none;
+    }
+    ul.header__social {
+      display: flex;
+      gap:2rem;
+      font-size: 2rem;
+      li {
+        a {
+          color: $clr-dark;
+        }
+      }
+    }
+    ul.header__extra {
+      display: flex;
+      gap:2rem;
+      font-size: 2rem;
+      li {
+        a {
+          color: $clr-dark;
+        }
+      }
+    }
+  }
+ 
+
+  @include mediaQuery($break-lg){
+    .branding {
+      h4.details{
+        // display: --overwriting
+        display: flex;
+        gap:2rem;
+      }
+      .toggle__menu {
+        display:none;
+      }
+    }
+    &__details{
+      display: none;
+    }
+    &__actions {
+      display: grid;
+      grid-template-columns: 3fr .8fr .8fr;
+      justify-items: flex-end;
+      ul.header__nav {
+        display: flex;
+        gap:3rem;
+        li {
+          a {
+            font-family: $ff-primary;
+          }
+        }
+      }
+    }
+    
+  }
+
+  }
+
+  
+  

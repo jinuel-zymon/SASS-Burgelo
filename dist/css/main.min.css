@@ -1,0 +1,122 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Oswald, sans-serif;
+  line-height: 1.5;
+  color: #2b2b2b;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.header {
+  background: #ffffff;
+}
+.header .branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .branding h4.details {
+  display: none;
+}
+.header .branding h4.details i {
+  color: #ffc139;
+  font-size: 2.5rem;
+}
+.header .branding .toggle__menu {
+  background: #ffc139;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.header .branding .toggle__menu span {
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 5rem;
+}
+.header .branding .toggle__menu span:nth-child(2) {
+  margin: 0.5rem 0;
+}
+.header__details h4 {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.header__details h4 i {
+  color: #ffc139;
+  font-size: 2.5rem;
+}
+.header__actions {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header__actions ul.header__nav {
+  display: none;
+}
+.header__actions ul.header__social {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+}
+.header__actions ul.header__social li a {
+  color: #2b2b2b;
+}
+.header__actions ul.header__extra {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+}
+.header__actions ul.header__extra li a {
+  color: #2b2b2b;
+}
+@media screen and (min-width: 1024px) {
+  .header .branding h4.details {
+    display: flex;
+    gap: 2rem;
+  }
+  .header .branding .toggle__menu {
+    display: none;
+  }
+  .header__details {
+    display: none;
+  }
+  .header__actions {
+    display: grid;
+    grid-template-columns: 3fr 0.8fr 0.8fr;
+    justify-items: flex-end;
+  }
+  .header__actions ul.header__nav {
+    display: flex;
+    gap: 3rem;
+  }
+  .header__actions ul.header__nav li a {
+    font-family: Oswald, sans-serif;
+  }
+}/*# sourceMappingURL=main.min.css.map */

@@ -1,0 +1,24 @@
+@use "../abstract/" as *;
+@use "../base/typography" as *;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+body {
+  font-size: 1.6rem;
+  font-family: $ff-primary;
+  line-height: 1.5;
+  color: $clr-dark;
+}
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding:1.5rem;
+  width: 100%;
+}
+
+$break-sm:500px;
+$break-md:768px;
+$break-lg:1024px;
