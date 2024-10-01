@@ -62,6 +62,9 @@ ul, li {
 .header .branding .toggle__menu span:nth-child(2) {
   margin: 0.5rem 0;
 }
+.header__details {
+  margin-top: 5rem;
+}
 .header__details h4 {
   margin: 1rem 0;
   display: flex;
@@ -73,12 +76,57 @@ ul, li {
   font-size: 2.5rem;
 }
 .header__actions {
-  margin: 2rem 0;
+  margin-top: 7rem;
   display: flex;
   justify-content: space-between;
 }
 .header__actions ul.header__nav {
-  display: none;
+  background: #e3e2e2;
+  position: absolute;
+  top: 10rem;
+  left: 0rem;
+  width: 100%;
+  max-height: 0rem;
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s ease;
+  gap: 2rem;
+}
+.header__actions ul.header__nav.open {
+  max-height: 50rem;
+  padding: 5rem;
+  transition: 0.5s ease;
+}
+.header__actions ul.header__nav li {
+  transition: 0.5s ease;
+  position: relative;
+}
+.header__actions ul.header__nav li a {
+  color: #2b2b2b;
+}
+.header__actions ul.header__nav li::after {
+  content: "";
+  width: 4rem;
+  height: 0.2rem;
+  background-color: transparent;
+  display: block;
+  position: absolute;
+  right: 25rem;
+  top: 50%;
+  transition: 0.5s ease;
+}
+.header__actions ul.header__nav li:hover {
+  transform: translateX(-5rem);
+  transition: 0.5s ease;
+}
+.header__actions ul.header__nav li:hover::after {
+  content: "";
+  background-color: #ffc139;
+  right: 10rem;
+  transition: 0.5s ease;
 }
 .header__actions ul.header__social {
   display: flex;
@@ -113,10 +161,23 @@ ul, li {
     justify-items: flex-end;
   }
   .header__actions ul.header__nav {
+    position: static;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
     display: flex;
-    gap: 3rem;
+    flex-direction: row;
+    background: #ffffff;
+    width: unset;
+    justify-items: flex-end;
   }
-  .header__actions ul.header__nav li a {
-    font-family: Oswald, sans-serif;
+  .header__actions ul.header__nav li:hover {
+    transform: translateX(0rem);
+  }
+  .header__actions ul.header__nav li:hover a {
+    color: #ffc139;
+  }
+  .header__actions ul.header__nav li:hover::after {
+    content: "";
+    display: none;
   }
 }/*# sourceMappingURL=main.min.css.map */
