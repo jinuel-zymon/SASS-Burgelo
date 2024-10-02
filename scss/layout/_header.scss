@@ -22,14 +22,34 @@
         background-color: $clr-light;
         display: block;
         border-radius: 5rem;
+        transition: 0.5s ease;
         &:nth-child(2) {
           margin: 0.5rem 0;
         }
       }
+      &.open {
+          span {
+            &:first-child {
+              transform: translateY(6px) rotate(225deg);
+              transition: 0.5s ease;
+            }
+            &:last-child {
+              transform: translateY(-10px) rotate(-225deg);
+              transition: 0.5s ease;
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            
+          }
+      }
+
     }
   }
   &__details {
-    margin-top: 5rem;
+    margin:2rem 0;
+    display: flex;
+    flex-direction: column;
     h4 {
       margin: 1rem 0;
       display: flex;
@@ -39,11 +59,15 @@
         color: $clr-primary;
         font-size: 2.5rem;
       }
+      span {
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
     }
   }
 
   &__actions {
-    margin-top: 7rem;
+    margin:2rem 0;
     display: flex;
     justify-content: space-between;
     ul.header__nav {
@@ -116,6 +140,7 @@
       }
     }
   }
+
 
   @include mediaQuery($break-lg) {
     .branding {
