@@ -1,0 +1,25 @@
+@use "./colors" as *;
+
+$colors: (
+  "dark": $clr-dark,
+  "light": $clr-light,
+  "primary": $clr-primary,
+);
+
+@each $key, $val in $colors {
+  .text {
+    &--#{$key} {
+      color: $val;
+    }
+  }
+  .bg {
+    &--#{$key} {
+      background: $val;
+    }
+  }
+  .border {
+    &--#{$key} {
+      border: 1px solid $val;
+    }
+  }
+}

@@ -9,3 +9,21 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin centerAll(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin gridEven($columns,$gap){
+  display: grid;
+  grid-template-columns: repeat($columns,1fr);
+  grid-gap: $gap;
+}
+
+@mixin gridUneven($columns,$gap){
+  display: grid;
+  grid-template-columns: $columns;
+  grid-gap: $gap;
+}

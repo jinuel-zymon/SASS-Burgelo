@@ -158,7 +158,7 @@
     }
     &__actions {
       display: grid;
-      grid-template-columns: 3fr 0.8fr 0.8fr;
+      grid-template-columns: 2.3fr 1fr .4fr;
       justify-items: flex-end;
       ul.header__nav {
         position: static;
