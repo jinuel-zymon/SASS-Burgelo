@@ -814,7 +814,7 @@ ul, li {
   transition: 0.5s ease;
 }
 .meal__content .meal__nav__content__item__text {
-  transform: translateY(5.1rem);
+  transform: translateY(5.3rem);
   transition: 0.5s ease;
 }
 .meal__content .meal__nav__content__item__text h4 {
